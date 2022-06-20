@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost:27017/chat-simple');
+mongoose.connect(process.env.DATEBASE_URL);
 
 const MessageSchema = mongoose.Schema(
   {
