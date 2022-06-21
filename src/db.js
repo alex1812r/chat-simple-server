@@ -5,7 +5,11 @@ mongoose.connect(process.env.DATEBASE_URL);
 const MessageSchema = mongoose.Schema(
   {
     content: String,
-    author: String
+    author: {
+      type: String,
+      trim: true,
+      lowercase: true,
+    }
   },
   { 
     timestamps: true 
